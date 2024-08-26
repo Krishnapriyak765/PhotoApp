@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:photoapp/HomePage.dart';
+import 'package:photoapp/Login.dart';
 import 'package:photoapp/main.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.amber,
                     borderRadius: BorderRadius.circular(height * 0.02)),
                 child: InkWell(
-                  onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage())),
+                  onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Login())),
                   child: Center(
                     child: Text("Get Started",
                     style: TextStyle(

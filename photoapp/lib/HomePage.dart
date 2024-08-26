@@ -10,6 +10,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+         child: CircleAvatar(
+                    child: IconButton(onPressed: ()=>Navigator.of(context).pop(), icon: Icon(Icons.arrow_back)),
+                    backgroundColor: Colors.amber,
+                  )
+        ),
+      ),
+    );
   }
 }

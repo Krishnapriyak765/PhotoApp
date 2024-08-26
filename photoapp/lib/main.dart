@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photoapp/LoginPage.dart';
+import 'package:photoapp/Splashscreen.dart';
 
 var height;
 var width;
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       
-      home:  LoginPage(),
+      home:  SplashScreen(),
     );
   }
 }
