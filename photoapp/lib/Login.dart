@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          physics: ClampingScrollPhysics(),
+          physics: const ClampingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
                       )),
                 ),
                 CircleAvatar(
-                  child: IconButton(onPressed: ()=>Navigator.of(context).pop(), icon: Icon(Icons.arrow_back)),
+                  child: IconButton(onPressed: ()=>Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back)),
                   backgroundColor: Colors.amber,
                 )
             ]),
@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                       boxShadow: [
-                        BoxShadow(
+                        const BoxShadow(
                             color: Colors.grey,
                             blurRadius: 10,
                             offset: Offset(2, 4),
@@ -72,7 +72,9 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.only(left: 8, right: 8),
                     child: TextFormField(
                       decoration: const InputDecoration(
-                          hintText: "UserName", icon: Icon(Icons.person)),
+                          hintText: "UserName", 
+                          icon: Icon(Icons.person),
+                           border: InputBorder.none),
                       textAlign: TextAlign.left,
                       minLines: 1,
                       maxLines: 1,
@@ -95,7 +97,7 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                       boxShadow: [
-                        BoxShadow(
+                        const BoxShadow(
                             color: Colors.grey,
                             blurRadius: 10,
                             offset: Offset(2, 4),
@@ -106,7 +108,8 @@ class _LoginState extends State<Login> {
                     child: TextFormField(
                       decoration: const InputDecoration(
                           hintText: "Password",
-                          icon: Icon(Icons.remove_red_eye)),
+                          icon: Icon(Icons.remove_red_eye),
+                           border: InputBorder.none),
                       textAlign: TextAlign.left,
                       minLines: 1,
                       maxLines: 1,
@@ -141,11 +144,10 @@ class _LoginState extends State<Login> {
                     ),
                   )),
               SizedBox(height: height * 0.02),
-
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
-                  text: "Dont have a account?",
+                  text: "Dont have an account?",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: height * 0.012,
@@ -153,7 +155,7 @@ class _LoginState extends State<Login> {
                 ),
                 WidgetSpan(
                   child: InkWell(
-                    onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SignUpPage())),
+                    onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const SignUpPage())),
                      child: Text(" SignUp" ,
                     style: TextStyle(
                         color: Colors.amber,
@@ -165,8 +167,7 @@ class _LoginState extends State<Login> {
               SizedBox(
                 height: height * 0.03,
               ),
-
-              //  Image(image: AssetImage("asset/login.webp"))
+              //  Image(image:AssetImage("asset/login.webp"))
             ],
           ),
         ),
